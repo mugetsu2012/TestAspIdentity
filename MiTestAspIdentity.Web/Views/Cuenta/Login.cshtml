@@ -1,0 +1,16 @@
+﻿@model MiTestAspIdentity.Web.Model.LoginDto
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<form asp-controller="Cuenta" asp-action="Ingresar">
+    <label asp-for="Usuario">Usuario: </label>
+    <input asp-for="Usuario"/>
+    <br/>
+    <label>Password: </label>
+    <input type="password" asp-for="Password"/>
+    <br/>
+    <button type="submit">Ingresar</button>
+</form>

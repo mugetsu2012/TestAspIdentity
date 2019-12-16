@@ -1,0 +1,25 @@
+﻿@model MiTestAspIdentity.Web.Model.GuardarUsuarioDto
+@{
+    ViewData["Title"] = "CrearUsuario";
+}
+
+<h1>Crear Usuario</h1>
+
+<form asp-controller="Cuenta" asp-action="GuardarUsuario">
+    <label asp-for="Nombre">Nombre: </label>
+    <input type="text" asp-for="Nombre"/>
+    <br/>
+    <label asp-for="Apellido">Apellido: </label>
+    <input asp-for="Apellido"/>
+    <br />
+    <label asp-for="Email">Correo: </label>
+    <input type="email" asp-for="Email"/>
+    <br />
+    <label asp-for="UserName">Nombre usuario: </label>
+    <input asp-for="UserName"/>
+    <br/>
+    <label asp-for="Password">Password: </label>
+    <input asp-for="Password" type="password"/>
+    <br/>
+    <button type="submit">Enviar</button>
+</form>

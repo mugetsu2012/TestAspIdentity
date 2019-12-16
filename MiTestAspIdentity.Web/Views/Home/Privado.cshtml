@@ -1,0 +1,16 @@
+﻿@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Privado";
+}
+
+<h1>Privado</h1>
+
+
+<h2>Si estas leyendo esto, es porque te pudiste loguear. Acá tus datos: </h2>
+<ul>
+    <li>Nombre: @User.Claims.First(x => x.Type == ClaimTypes.GivenName).Value</li>
+    <li>Apellido: @User.Claims.First(x => x.Type == ClaimTypes.Surname).Value</li>
+    <li>Correo: @User.Claims.First(x => x.Type == ClaimTypes.Email).Value</li>
+    <li>Cuenta: @User.Claims.First(x => x.Type == "cuenta").Value</li>
+</ul>
